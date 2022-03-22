@@ -8,8 +8,8 @@
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
   inputs.src-linear_models-master.flake = false;
+  inputs.src-linear_models-master.ref   = "refs/heads/master";
   inputs.src-linear_models-master.owner = "ayman-albaz";
-  inputs.src-linear_models-master.ref   = "master";
   inputs.src-linear_models-master.repo  = "linear-models";
   inputs.src-linear_models-master.type  = "github";
   
