@@ -11,6 +11,7 @@
   inputs.src-linear_models-master.ref   = "refs/heads/master";
   inputs.src-linear_models-master.owner = "ayman-albaz";
   inputs.src-linear_models-master.repo  = "linear-models";
+  inputs.src-linear_models-master.dir   = "";
   inputs.src-linear_models-master.type  = "github";
   
   inputs."arraymancer".owner = "nim-nix-pkgs";
