@@ -134,11 +134,11 @@
       },
       "locked": {
         "dir": "master",
-        "lastModified": 1656303094,
-        "narHash": "sha256-6c1yuz0998vDpI7IZXwGftcSG9gcGAKr1zlQCiZK/sY=",
+        "lastModified": 1656748557,
+        "narHash": "sha256-d+HPYDW888vIhfpZj0xz1ExAocgLxdQwyDosup8/yjI=",
         "owner": "nim-nix-pkgs",
         "repo": "linear_models",
-        "rev": "aa140c7c70a8807e6822fd9301d99e375bc06d2b",
+        "rev": "e7bf315b9bf21eab28267b8b4d60c49a8d111df2",
         "type": "github"
       },
       "original": {
