@@ -7,11 +7,11 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs.src-linear_models-master.flake = false;
-  inputs.src-linear_models-master.ref   = "refs/heads/master";
-  inputs.src-linear_models-master.owner = "ayman-albaz";
-  inputs.src-linear_models-master.repo  = "linear-models";
-  inputs.src-linear_models-master.type  = "github";
+  inputs.src-linear_models-v0_2_0.flake = false;
+  inputs.src-linear_models-v0_2_0.ref   = "refs/tags/v0.2.0";
+  inputs.src-linear_models-v0_2_0.owner = "ayman-albaz";
+  inputs.src-linear_models-v0_2_0.repo  = "linear-models";
+  inputs.src-linear_models-v0_2_0.type  = "github";
   
   inputs."arraymancer".owner = "nim-nix-pkgs";
   inputs."arraymancer".ref   = "master";
@@ -32,13 +32,13 @@
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
     lib  = flakeNimbleLib.lib;
-    args = ["self" "nixpkgs" "flakeNimbleLib" "src-linear_models-master"];
+    args = ["self" "nixpkgs" "flakeNimbleLib" "src-linear_models-v0_2_0"];
     over = if builtins.pathExists ./override.nix 
            then { override = import ./override.nix; }
            else { };
   in lib.mkRefOutput (over // {
     inherit self nixpkgs ;
-    src  = deps."src-linear_models-master";
+    src  = deps."src-linear_models-v0_2_0";
     deps = builtins.removeAttrs deps args;
     meta = builtins.fromJSON (builtins.readFile ./meta.json);
   } );
